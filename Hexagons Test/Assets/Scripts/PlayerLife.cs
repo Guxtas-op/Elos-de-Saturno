@@ -1,5 +1,6 @@
-using System.Collections;
+//using UnityEngine.SceneManagement; (Future add)
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -9,14 +10,16 @@ public class PlayerLife : MonoBehaviour
     public Image redBar;
 
     public int maxHealth = 5;
-    int currentHealth; //Atual
-
+    public int currentHealth;
+    public int damageCount = 1;
+     
+    public bool isDead = false; //Morte
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void SetHealth(int amount)
+    public void SetHealth()
     {
         Vector3 lifebarScale = lifebar.rectTransform.localScale;
         lifebarScale.x = (float) currentHealth / maxHealth;
@@ -38,5 +41,42 @@ public class PlayerLife : MonoBehaviour
         }
         redBar.transform.localScale = newScale;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Meteoro")
+        {
+            Destroy(collision.gameObject,1.5f);
+            Damage();
+        }
+    }
     
+    public void Damage() //Classe para o dano
+    {
+        if(!isDead)
+        { 
+            currentHealth -= damageCount; // Damage
+            //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
+            //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
+            //PlaySong(danoSong);//Audio dano (Future Add)
+        }
+
+        if (currentHealth <= 0) 
+        {
+            isDead = true;
+            //anim.SetTrigger("isDeath"); //Animaçao de morte (Future Add)
+            Dead();
+        }
+    }
+    void Dead () 
+    { 
+        //PlaySong(morteSong);//Audio de morte (Future Add)
+        StartCoroutine (Death());
+    }
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds (2);
+        Destroy (gameObject);
+        //SceneManager.LoadScene (Death); (Future Add)
+    }
 }
