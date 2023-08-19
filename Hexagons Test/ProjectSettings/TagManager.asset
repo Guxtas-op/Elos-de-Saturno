@@ -7,16 +7,17 @@ TagManager:
   - Oxigen
   - "Cen\xE1rio"
   - Meteoro
+  - Walls
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Oxigen
   - Water
   - UI
   - Ground
   - Player
-  - 
+  - Walls
   - 
   - 
   - 

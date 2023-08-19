@@ -55,7 +55,8 @@ public class PlayerLife : MonoBehaviour
     {
         if(!isDead)
         { 
-            currentHealth -= damageCount; // Damage
+            currentHealth -= damageCount;
+            SetHealth(); // Damage
             //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
             //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
             //PlaySong(danoSong);//Audio dano (Future Add)

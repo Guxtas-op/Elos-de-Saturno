@@ -8,18 +8,32 @@ public class Enemy : MonoBehaviour
     private int enemyDamage;
     int enemyCurrentHealth;
 
+    public float speed;
+    Rigidbody rb;
+
     public static bool isDead = false;
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth;
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    void FixedUpdate()
+    {
+        rb.AddForce(-(transform.forward) * speed);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Damage(enemyDamage);
+        }
+
+        if(collision.gameObject.tag == "Walls")
+        {
+            rb.AddForce((transform.forward) * speed);
+            Debug.Log("encostei");
         }
     }
 
