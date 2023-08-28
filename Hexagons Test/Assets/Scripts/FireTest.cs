@@ -44,4 +44,5 @@ public class FireTest : MonoBehaviour
     {
         tirin = true;
     }
+    // vo se jogar
 }
