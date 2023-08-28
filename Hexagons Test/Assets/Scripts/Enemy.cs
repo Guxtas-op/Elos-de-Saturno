@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.tag == "Walls")
         {
             rb.AddForce((transform.forward) * speed);
-            Debug.Log("encostei");
         }
     }
 

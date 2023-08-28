@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public int oxigen;
+    /*
+    public int duplicateGun;
+    public gameObject Arma;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Oxigen"))
+        if (collision.gameObject.CompareTag("DoubleGun"))
         {
-            Destroy(collision.gameObject);
-            oxigen++;
+            Instantiate(Arma, target.position, Quaternion.identity);
         }
     }
 }
