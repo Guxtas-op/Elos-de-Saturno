@@ -15,4 +15,5 @@ public class PowerUp : MonoBehaviour
             Instantiate(Arma, target.position, Quaternion.identity);
         }
     }
+    */
 }
