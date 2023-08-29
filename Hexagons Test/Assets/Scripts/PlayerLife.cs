@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public GameObject DIEMenu;
     public Image lifebar;
     public Image redBar;
 
@@ -46,7 +47,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (collision.gameObject.tag == "Meteoro")
         {
-            Destroy(collision.gameObject,1.5f);
+            Destroy(collision.gameObject,0.3f);
             Damage();
         }
     }
@@ -78,6 +79,6 @@ public class PlayerLife : MonoBehaviour
     {
         yield return new WaitForSeconds (2);
         Destroy (gameObject);
-        //SceneManager.LoadScene (Death); (Future Add)
+        DIEMenu.active = true;
     }
 }

@@ -28,11 +28,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Damage(enemyDamage);
-        }
-
-        if(collision.gameObject.tag == "Walls")
-        {
-            rb.AddForce((transform.forward) * speed);
+            Destroy(gameObject);
         }
     }
 
