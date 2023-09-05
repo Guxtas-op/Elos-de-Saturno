@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 5
   enemyDamage: 1
-  speed: 30
+  speed: 20
 --- !u!65 &3281085966590745064
 BoxCollider:
   m_ObjectHideFlags: 0

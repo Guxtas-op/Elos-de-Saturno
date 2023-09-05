@@ -11,9 +11,8 @@ public class FrozenShot : MonoBehaviour
         StartCoroutine(Despawn(20f));
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnColisionEnter(Collider other)
     {
-        Debug.Log("Bunda");
         if (other.gameObject.CompareTag("Player"))
         {  
             if(other.gameObject.GetComponent<Player>().isFrozen)
