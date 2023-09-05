@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
     //         EnemyDead();
     //     }
     // }
-    
+
     void EnemyDead () 
     { 
         //PlaySong(morteSong);//Audio de morte (Future Add)
@@ -58,6 +58,5 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds (2);
         Destroy (gameObject);
-        //SceneManager.LoadScene (Death); (Future Add)
     }
 }

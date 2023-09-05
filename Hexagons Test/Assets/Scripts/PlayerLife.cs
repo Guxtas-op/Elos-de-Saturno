@@ -41,22 +41,13 @@ public class PlayerLife : MonoBehaviour
         }
         redBar.transform.localScale = newScale;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Meteoro")
-        {
-            Destroy(collision.gameObject,0.3f);
-            Damage(1f);
-        }
-    }
     
     public void Damage(float damageCount) //Classe para o dano
     {
         if(!isDead)
         { 
             currentHealth -= damageCount;
-            //SetHealth(); // Damage
+            SetHealth(); // Damage
             //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
             //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
             //PlaySong(danoSong);//Audio dano (Future Add)
@@ -72,7 +63,7 @@ public class PlayerLife : MonoBehaviour
     void Dead () 
     { 
         //PlaySong(morteSong);//Audio de morte (Future Add)
-        //StartCoroutine (Death());
+        StartCoroutine (Death());
     }
     IEnumerator Death()
     {
