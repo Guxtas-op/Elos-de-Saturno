@@ -10,9 +10,8 @@ public class PlayerLife : MonoBehaviour
     public Image lifebar;
     public Image redBar;
 
-    public int maxHealth = 5;
-    public int currentHealth;
-    public int damageCount = 1;
+    public float maxHealth = 5;
+    public float currentHealth;
      
     public bool isDead = false; //Morte
     void Start()
@@ -48,16 +47,16 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.tag == "Meteoro")
         {
             Destroy(collision.gameObject,0.3f);
-            Damage();
+            Damage(1f);
         }
     }
     
-    public void Damage() //Classe para o dano
+    public void Damage(float damageCount) //Classe para o dano
     {
         if(!isDead)
         { 
             currentHealth -= damageCount;
-            SetHealth(); // Damage
+            //SetHealth(); // Damage
             //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
             //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
             //PlaySong(danoSong);//Audio dano (Future Add)
@@ -73,7 +72,7 @@ public class PlayerLife : MonoBehaviour
     void Dead () 
     { 
         //PlaySong(morteSong);//Audio de morte (Future Add)
-        StartCoroutine (Death());
+        //StartCoroutine (Death());
     }
     IEnumerator Death()
     {

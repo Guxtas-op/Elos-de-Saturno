@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int enemyMaxHealth = 5;
-    private int enemyDamage;
-    int enemyCurrentHealth;
+    public float enemyMaxHealth = 5;
+    public float enemyDamage = 1f;
+    float enemyCurrentHealth;
 
     public float speed;
     Rigidbody rb;
@@ -27,27 +27,28 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Damage(enemyDamage);
+            collision.gameObject.GetComponent<PlayerLife>().Damage(enemyDamage);
             Destroy(gameObject);
         }
     }
 
-    public void Damage (int enemyDamage) //Classe para o dano
-    {
-        if(!isDead)
-        { 
-            enemyCurrentHealth -= enemyDamage; //Damage
-            //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
-            //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
-            //PlaySong(danoSong);//Audio dano (Future Add)
-        }
-        if (enemyCurrentHealth <= 0) 
-        {
-            isDead = true;
-            //anim.SetTrigger("isDeath"); //Animaçao de morte (Future Add)
-            EnemyDead();
-        }
-    }
+    // public void Damage (int enemyDamage) //Classe para o dano
+    // {
+    //     if(!isDead)
+    //     { 
+    //         enemyCurrentHealth -= enemyDamage; //Damage
+    //         //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
+    //         //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
+    //         //PlaySong(danoSong);//Audio dano (Future Add)
+    //     }
+    //     if (enemyCurrentHealth <= 0) 
+    //     {
+    //         isDead = true;
+    //         //anim.SetTrigger("isDeath"); //Animaçao de morte (Future Add)
+    //         EnemyDead();
+    //     }
+    // }
+    
     void EnemyDead () 
     { 
         //PlaySong(morteSong);//Audio de morte (Future Add)

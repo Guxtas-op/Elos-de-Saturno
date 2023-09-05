@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //[SerializedField] private TransformReference globalPlayerPosition;
+
     private CharacterController controller;
     private Vector3 moveDirection;
     private Animator anim;
 
     public float speed;
+    public bool isFrozen;
     
     void Start()
     {
@@ -19,10 +22,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+
+        //globalPlayerPosition.value = transform.position;
     }
 
     void Move()
     {
+        if (isFrozen)
+            return;
+            
         moveDirection = Vector3.zero;
 
         if (Input.GetKey(KeyCode.A))
