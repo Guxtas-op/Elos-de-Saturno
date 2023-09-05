@@ -28,7 +28,7 @@ public class Spawn : MonoBehaviour
     {
         Vector3 randomPos = RandomPointInBounds(bounds.bounds);
         GameObject meteorObj = Instantiate(oxigenPrefab, randomPos, transform.rotation * Quaternion.Euler(-90f,0f,0f));
-        yield return new WaitForSeconds(coolDown*2);
+        yield return new WaitForSeconds(coolDown*4);
         StartCoroutine(nameof(SpawnOxigen));
     }
 

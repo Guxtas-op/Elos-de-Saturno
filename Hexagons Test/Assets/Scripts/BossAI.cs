@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BossAI : MonoBehaviour
 {
-    //[SerializedField] private TransformReference globalPlayerPosition;
     public Player player;
     public GameObject frozenBallPrefab;
     public float cooldown;
@@ -16,8 +15,6 @@ public class BossAI : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-
         if(fire == true)
         {
             AttackPlayer();

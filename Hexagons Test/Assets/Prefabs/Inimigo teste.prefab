@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 799452670541290141}
   - component: {fileID: 3281085966590745064}
   - component: {fileID: 530193561681570237}
+  - component: {fileID: -2301081466251989625}
   m_Layer: 0
   m_Name: Inimigo teste
   m_TagString: Meteoro
@@ -99,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMaxHealth: 5
-  speed: 20
+  enemyDamage: 1
+  speed: 30
 --- !u!65 &3281085966590745064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,3 +150,15 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &-2301081466251989625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435758972324268421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2929f9c96373446b8f2a7291e75d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
