@@ -1,33 +1,29 @@
-//using UnityEngine.SceneManagement; (Future add)
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class PlayerLife : MonoBehaviour
-{
-    public GameObject DIEMenu;
-    public Image lifebar;
-    public Image redBar;
+public class BossLife : MonoBehaviour
+{/*
+    public float enemyMaxHealth = 5;
+    public float enemyCurrentHealth;
 
-    public float maxHealth = 5;
-    public float currentHealth;
-     
-    public bool isDead = false; //Morte
+    public bool enemyIsDead = false;
+
     void Start()
     {
-        currentHealth = maxHealth;
+        enemyCurrentHealth = enemyMaxHealth;
     }
 
-    public void SetHealth()
+    public void EnemySetHealth()
     {
         Vector3 lifebarScale = lifebar.rectTransform.localScale;
         lifebarScale.x = (float) currentHealth / maxHealth;
         lifebar.rectTransform.localScale = lifebarScale;
-        StartCoroutine(DecreasingRedBar(lifebarScale));
+        StartCoroutine(EnemyDecreasingRedBar(lifebarScale));
     }
 
-    IEnumerator DecreasingRedBar(Vector3 newScale)
+    IEnumerator EnemyDecreasingRedBar(Vector3 newScale)
     {
         yield return new WaitForSeconds(0.3f);
         Vector3 redBarScale = redBar.transform.localScale;
@@ -42,20 +38,21 @@ public class PlayerLife : MonoBehaviour
         redBar.transform.localScale = newScale;
     }
     
-    public void Damage(float damageCount) //Classe para o dano
+
+    public void EnemyDamage(float damage) //Classe para o dano
     {
         if(!isDead)
         { 
-            currentHealth -= damageCount;
-            SetHealth(); // Damage
+            currentHealth -= damage;
+            EnemySetHealth(); // Damage
             //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
             //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
             //PlaySong(danoSong);//Audio dano (Future Add)
         }
 
-        if (currentHealth <= 0) 
+        if (enemyCurrentHealth <= 0) 
         {
-            isDead = true;
+            enemyIsDead = true;
             //anim.SetTrigger("isDeath"); //Animaçao de morte (Future Add)
             Dead();
         }
@@ -63,12 +60,12 @@ public class PlayerLife : MonoBehaviour
     void Dead () 
     { 
         //PlaySong(morteSong);//Audio de morte (Future Add)
-        StartCoroutine (Death());
+        StartCoroutine (EnemyDeath());
     }
-    IEnumerator Death()
+    IEnumerator EnemyDeath()
     {
         yield return new WaitForSeconds (2);
         Destroy (gameObject);
-        DIEMenu.active = true;
     }
+    */
 }

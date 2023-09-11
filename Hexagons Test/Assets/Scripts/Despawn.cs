@@ -6,7 +6,7 @@ public class Despawn : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine((DespawnItens(5.5f)));
+        StartCoroutine((DespawnItens(4.5f)));
     }
 
     IEnumerator DespawnItens(float timer)
