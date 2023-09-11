@@ -5,19 +5,35 @@ using UnityEngine;
 public class BossAI : MonoBehaviour
 {
     public Player player;
+
     public GameObject frozenBallPrefab;
+    public GameObject basicBallPrefab;
+
     public float cooldown;
+    public float cdr;
+
     private bool fire = true;
+    private bool attack = true;
+
     public float strength;
+    public float power;
     public float life;
 
     public Transform armaPos;
+    public Transform lArmaPos;
+    public Transform rArmaPos;
 
     void Update()
     {
         if(fire == true)
         {
             AttackPlayer();
+        }
+
+        if(attack == true)
+        {
+            LeftAttackPlayer();
+            RightAttackPlayer();
         }
     }
 
@@ -30,8 +46,31 @@ public class BossAI : MonoBehaviour
         Invoke(nameof(ResetFrozenFire), cooldown);
     }
 
+     void LeftAttackPlayer()
+    {
+        attack = false;
+        GameObject basicBall = Instantiate (basicBallPrefab, lArmaPos.position, Quaternion.identity);
+        Vector3 direction = (player.transform.position - lArmaPos.position).normalized * power;
+        basicBall.GetComponent<Rigidbody>().velocity = direction;
+        Invoke(nameof(ResetFire), cdr);
+    }
+
+    void RightAttackPlayer()
+    {
+        attack = false;
+        GameObject basicBall = Instantiate (basicBallPrefab, rArmaPos.position, Quaternion.identity);
+        Vector3 dir = (player.transform.position - rArmaPos.position).normalized * power;
+        basicBall.GetComponent<Rigidbody>().velocity = dir;
+        Invoke(nameof(ResetFire), cdr);
+    }
+    
     void ResetFrozenFire()
     {
         fire = true;
+    }
+
+    void ResetFire()
+    {
+        attack = true;
     }
 }

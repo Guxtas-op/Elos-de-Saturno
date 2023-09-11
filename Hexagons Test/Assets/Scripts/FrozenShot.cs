@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class FrozenShot : MonoBehaviour
 {
-    public float damagePlayer = 1;
-
     private void Start()
     {
-        StartCoroutine(Despawn(20f));
+        StartCoroutine(Despawn(15.5f));
     }
 
-    private void OnColisionEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {  
             if(other.gameObject.GetComponent<Player>().isFrozen)
                 return;
-            StartCoroutine(Froze(other.gameObject));    
+            StartCoroutine(Froze(other.gameObject));
         }
     }
 
     IEnumerator Froze(GameObject plr)
     {
         plr.GetComponent<Player>().isFrozen = true;
-        plr.GetComponent<PlayerLife>().Damage(0.5f);
-        yield return new WaitForSeconds (2.5f);
+        plr.GetComponent<PlayerLife>().Damage(0.5f); 
+        gameObject.GetComponent<Renderer>().enabled = false;
+        yield return new WaitForSeconds (2.5f); 
         plr.GetComponent<Player>().isFrozen = false;
         Destroy(this.gameObject);
     }
+
 
     IEnumerator Despawn(float timer)
     {

@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39017866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.21, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -776,7 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393555898}
   - component: {fileID: 1393555899}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Arma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_LocalPosition.x
@@ -977,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_TagString
@@ -985,15 +985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6905609870639353253, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7036213049465896255, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8719771546195959716, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   DIEMenu: {fileID: 410823969}
   lifebar: {fileID: 1094010957}
   redBar: {fileID: 1965689295}
-  maxHealth: 5
+  maxHealth: 10
   currentHealth: 0
   isDead: 0
 --- !u!114 &1519092813
@@ -1164,7 +1164,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1195,7 +1195,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!1 &1635418993
 GameObject:
@@ -1221,7 +1221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635418993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.902, y: -0.045999985, z: 0.028}
+  m_LocalPosition: {x: -1.75, y: -0.045999985, z: 2}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1330,7 +1330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733864451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1371,10 +1371,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1519092815}
   frozenBallPrefab: {fileID: 1857646874981700627, guid: 8a0c42e12a8120b4597cf75c153acd58, type: 3}
-  cooldown: 10
+  basicBallPrefab: {fileID: 1009016884573841566, guid: 7f45ae89ed0723749bf7843a3f6038e0, type: 3}
+  cooldown: 100
+  cdr: 30
   strength: 400
+  power: 100
   life: 0
   armaPos: {fileID: 1635418994}
+  lArmaPos: {fileID: 1733864452}
+  rArmaPos: {fileID: 39017867}
 --- !u!65 &1742149416
 BoxCollider:
   m_ObjectHideFlags: 0
