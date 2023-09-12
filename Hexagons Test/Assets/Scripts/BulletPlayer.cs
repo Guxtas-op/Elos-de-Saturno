@@ -33,7 +33,7 @@ public class BulletPlayer : MonoBehaviour
     IEnumerator EnemyDamage(GameObject boss)
     {
         boss.GetComponent<BossLife>().canTakeDamage = true;
-        boss.GetComponent<BossLife>().EnemyDamage(0.3f); 
+        boss.GetComponent<BossLife>().EnemyDamage(1.5f); 
         yield return new WaitForSeconds (0.1f); 
         Destroy(this.gameObject);
         bulletCount = false;

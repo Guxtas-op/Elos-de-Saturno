@@ -19,7 +19,7 @@ public class BossBasicAttack : MonoBehaviour
 
     IEnumerator BasicDamageBoss(GameObject player)
     {
-        player.GetComponent<PlayerLife>().Damage(1.2f);
+        player.GetComponent<PlayerLife>().Damage(0.4f);
         gameObject.GetComponent<Renderer>().enabled = false;
         yield return new WaitForSeconds (0.5f); 
         Destroy(this.gameObject);

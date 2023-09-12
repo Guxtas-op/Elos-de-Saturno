@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3126713502936790260
+--- !u!1001 &5325564313472103197
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,31 +10,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.018077
+      value: -0.33674622
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.368817
+      value: 11.617137
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.6921797
+      value: -2.7645955
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,11 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       propertyPath: m_Name
-      value: PrefabMeteoro
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
-      propertyPath: m_TagString
-      value: Meteoro
+      value: Prefab Meteor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78,44 +74,29 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8072242880767071136}
+      addedObject: {fileID: 7455878526552408094}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8233356198772661234}
+      addedObject: {fileID: 2482556640040037218}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -6403501336148601371}
+      addedObject: {fileID: -7736486288514373187}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3198806919381277332}
+      addedObject: {fileID: 3195234894750976792}
   m_SourcePrefab: {fileID: 100100000, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
---- !u!1 &2856751714948336037 stripped
+--- !u!1 &4983617091057569356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bc46084aa2990ae42ac03ea58fa568d9, type: 3}
-  m_PrefabInstance: {fileID: 3126713502936790260}
+  m_PrefabInstance: {fileID: 5325564313472103197}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8072242880767071136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856751714948336037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddeb7c7b7d239ed4ca9c591914ae305c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMaxHealth: 5
-  enemyDamage: 1
-  speed: 100
---- !u!135 &8233356198772661234
+--- !u!135 &7455878526552408094
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856751714948336037}
+  m_GameObject: {fileID: 4983617091057569356}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -128,15 +109,15 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4.154787
-  m_Center: {x: 2.443748, y: 1.8075652, z: 0.9120464}
---- !u!54 &-6403501336148601371
+  m_Radius: 1.7172179
+  m_Center: {x: 0.0061787367, y: -0.03425651, z: -0.6083813}
+--- !u!54 &2482556640040037218
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856751714948336037}
+  m_GameObject: {fileID: 4983617091057569356}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -157,15 +138,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3198806919381277332
+--- !u!114 &-7736486288514373187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856751714948336037}
+  m_GameObject: {fileID: 4983617091057569356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c2929f9c96373446b8f2a7291e75d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3195234894750976792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4983617091057569356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9fec65ba21dd9418b5f4e7f20d275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaxHealth: 5
+  meteorDamage: 1
+  speed: 100

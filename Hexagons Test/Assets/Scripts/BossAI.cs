@@ -49,16 +49,16 @@ public class BossAI : MonoBehaviour
     {
         attack = false;
         GameObject basicBall = Instantiate (basicBallPrefab, lArmaPos.position, Quaternion.identity);
-        Vector3 direction = (player.transform.position - lArmaPos.position).normalized * power;
+        Vector3 direction = (player.transform.position - lArmaPos.position).normalized * power * 2;
         basicBall.GetComponent<Rigidbody>().velocity = direction;
-        Invoke(nameof(ResetFire), cdr);
+        Invoke(nameof(ResetFire), cooldown);
     }
 
     void RightAttackPlayer()
     {
         attack = false;
         GameObject basicBall = Instantiate (basicBallPrefab, rArmaPos.position, Quaternion.identity);
-        Vector3 dir = (player.transform.position - rArmaPos.position).normalized * power;
+        Vector3 dir = (player.transform.position - rArmaPos.position).normalized * power * 2;
         basicBall.GetComponent<Rigidbody>().velocity = dir;
         Invoke(nameof(ResetFire), cdr);
     }

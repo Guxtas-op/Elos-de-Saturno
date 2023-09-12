@@ -1651,9 +1651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToRandomize: []
   bounds: {fileID: 802112570}
-  meteorPrefab: {fileID: 2856751714948336037, guid: da13cd5f4f5919647807a44022ea9515, type: 3}
+  meteorPrefab: {fileID: 4983617091057569356, guid: 69c5588b304b528429ebc6c259aef51b, type: 3}
   oxigenPrefab: {fileID: 8543781620525469717, guid: 904da9dcb49f48d4b91407f7bd191d92, type: 3}
-  coolDown: 1
+  coolDown: 1.7
 --- !u!4 &1595200515
 Transform:
   m_ObjectHideFlags: 0
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   DIEMenu: {fileID: 934485385}
   lifebar: {fileID: 1682741652}
   redBar: {fileID: 979880194}
-  maxHealth: 7
+  maxHealth: 10
   currentHealth: 0
   isDead: 0
 --- !u!114 &1799535526

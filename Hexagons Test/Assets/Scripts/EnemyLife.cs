@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyLife : MonoBehaviour
 {
     public float enemyMaxHealth = 5;
     public float enemyDamage = 1f;
@@ -32,26 +32,26 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // public void Damage (int enemyDamage) //Classe para o dano
-    // {
-    //     if(!isDead)
-    //     { 
-    //         enemyCurrentHealth -= enemyDamage; //Damage
-    //         //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
-    //         //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
-    //         //PlaySong(danoSong);//Audio dano (Future Add)
-    //     }
-    //     if (enemyCurrentHealth <= 0) 
-    //     {
-    //         isDead = true;
-    //         //anim.SetTrigger("isDeath"); //Animaçao de morte (Future Add)
-    //         EnemyDead();
-    //     }
-    // }
+     public void Damage (int enemyDamage)
+     {
+         if(!isDead)
+         { 
+             enemyCurrentHealth -= enemyDamage; 
+             //Instantiate(damageParticle,transform.position,transform.rotation); intacia a particula (Future add) 
+             //anim.SetTrigger("isHit");Animaçao de dano ( Future Add)
+             //PlaySong(danoSong);Audio dano (Future Add)
+         }
+         if (enemyCurrentHealth <= 0) 
+         {
+             isDead = true;
+             //anim.SetTrigger("isDeath"); Animaçao de morte (Future Add)
+             EnemyDead();
+         }
+     }
 
     void EnemyDead () 
     { 
-        //PlaySong(morteSong);//Audio de morte (Future Add)
+        //PlaySong(morteSong);Audio de morte (Future Add)
         StartCoroutine (EnemyDeath());
     }
     IEnumerator EnemyDeath()
