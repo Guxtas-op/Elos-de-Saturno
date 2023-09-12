@@ -24,7 +24,7 @@ public class FrozenShot : MonoBehaviour
         plr.GetComponent<Player>().isFrozen = true;
         plr.GetComponent<PlayerLife>().Damage(0.5f); 
         gameObject.GetComponent<Renderer>().enabled = false;
-        yield return new WaitForSeconds (2.5f); 
+        yield return new WaitForSeconds (3.4f); 
         plr.GetComponent<Player>().isFrozen = false;
         Destroy(this.gameObject);
     }

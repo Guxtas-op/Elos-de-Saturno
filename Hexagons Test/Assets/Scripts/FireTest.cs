@@ -36,7 +36,7 @@ public class FireTest : MonoBehaviour
 
             fire.GetComponent<Rigidbody>().velocity = impulse;
 
-            Invoke(nameof(ResetTirin), cooldown);
+            Invoke(nameof(ResetTirin), cooldown * 2);
         }
     }
 
@@ -44,5 +44,4 @@ public class FireTest : MonoBehaviour
     {
         tirin = true;
     }
-    // vo se jogar
 }

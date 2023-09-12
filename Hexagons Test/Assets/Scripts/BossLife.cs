@@ -4,11 +4,15 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class BossLife : MonoBehaviour
-{/*
+{
+    public Image lifebar;
+    public Image redBar;
+
     public float enemyMaxHealth = 5;
     public float enemyCurrentHealth;
 
     public bool enemyIsDead = false;
+    public bool canTakeDamage = true;
 
     void Start()
     {
@@ -18,7 +22,7 @@ public class BossLife : MonoBehaviour
     public void EnemySetHealth()
     {
         Vector3 lifebarScale = lifebar.rectTransform.localScale;
-        lifebarScale.x = (float) currentHealth / maxHealth;
+        lifebarScale.x = (float) enemyCurrentHealth / enemyMaxHealth;
         lifebar.rectTransform.localScale = lifebarScale;
         StartCoroutine(EnemyDecreasingRedBar(lifebarScale));
     }
@@ -41,9 +45,9 @@ public class BossLife : MonoBehaviour
 
     public void EnemyDamage(float damage) //Classe para o dano
     {
-        if(!isDead)
+        if(!enemyIsDead && canTakeDamage == true)
         { 
-            currentHealth -= damage;
+            enemyCurrentHealth -= damage;
             EnemySetHealth(); // Damage
             //Instantiate(damageParticle,transform.position,transform.rotation); //intacia a particula (Future add) 
             //anim.SetTrigger("isHit");//Animaçao de dano ( Future Add)
@@ -64,8 +68,8 @@ public class BossLife : MonoBehaviour
     }
     IEnumerator EnemyDeath()
     {
-        yield return new WaitForSeconds (2);
+        yield return new WaitForSeconds (2f);
         Destroy (gameObject);
     }
-    */
+
 }

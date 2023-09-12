@@ -17,7 +17,6 @@ public class BossAI : MonoBehaviour
 
     public float strength;
     public float power;
-    public float life;
 
     public Transform armaPos;
     public Transform lArmaPos;

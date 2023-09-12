@@ -414,7 +414,7 @@ RectTransform:
   m_Children:
   - {fileID: 693109576}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -635,7 +635,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &693109575
 GameObject:
@@ -901,7 +901,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &885564903
 GameObject:
@@ -1436,7 +1436,7 @@ Transform:
   - {fileID: 189870234}
   - {fileID: 2071108165}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!1 &1290533346
 GameObject:
@@ -1651,9 +1651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToRandomize: []
   bounds: {fileID: 802112570}
-  meteorPrefab: {fileID: 2435758972324268421, guid: 8925d8db25c237845ac5e1ddf4d064bb, type: 3}
+  meteorPrefab: {fileID: 2856751714948336037, guid: da13cd5f4f5919647807a44022ea9515, type: 3}
   oxigenPrefab: {fileID: 8543781620525469717, guid: 904da9dcb49f48d4b91407f7bd191d92, type: 3}
-  coolDown: 4
+  coolDown: 1
 --- !u!4 &1595200515
 Transform:
   m_ObjectHideFlags: 0
@@ -1785,7 +1785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 302b59738e10abf4e911e394add5c761, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   DIEMenu: {fileID: 934485385}
   lifebar: {fileID: 1682741652}
   redBar: {fileID: 979880194}
-  maxHealth: 5
+  maxHealth: 7
   currentHealth: 0
   isDead: 0
 --- !u!114 &1799535526
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   arma: {fileID: 1869168646}
   strength: 100
   forwardFactor: 100
-  cooldown: 0.7
+  cooldown: 2.5
 --- !u!114 &1799535528
 MonoBehaviour:
   m_ObjectHideFlags: 0

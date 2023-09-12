@@ -23,11 +23,11 @@ public class Enemy : MonoBehaviour
         rb.AddForce(-(transform.forward) * speed);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerLife>().Damage(enemyDamage);
+            other.gameObject.GetComponent<PlayerLife>().Damage(enemyDamage);
             Destroy(gameObject);
         }
     }
